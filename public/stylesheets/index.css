@@ -1,0 +1,95 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333333;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    padding: 20px;
+    background: #1F252D url("https://source.unsplash.com/random/1920x1080") no-repeat center fixed;
+    background-size: cover;
+}
+body .modal {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(42, 54, 59, 0.15);
+}
+body .modal .modal__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 500px;
+    width: 100%;
+    padding: 15px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+body .modal .modal__inner .modal__header {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.3);
+    padding: 20px 30px;
+    text-align: center;
+    background: #FAFAFA;
+}
+body .modal .modal__inner .modal__header h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+}
+body .modal .modal__inner .modal__form {
+    padding: 30px;
+    background: #fff;
+}
+body .modal .modal__inner .modal__form input {
+    width: 100%;
+    color: #cccccc;
+    font-size: 12px;
+    line-height: 1;
+    font-family: 'Roboto';
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    padding: 14px 10px;
+    outline: 0;
+}
+body .modal .modal__inner .modal__form input:active, body .modal .modal__inner .modal__form input:focus {
+    border-color: #85B61F;
+}
+body .modal .modal__inner .modal__footer {
+    padding: 20px 30px;
+    text-align: center;
+    background: #fff;
+}
+body .modal .modal__inner .modal__footer a {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+    background: #4166b2;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+body .modal .modal__inner .modal__footer a .fa {
+    margin: 0 10px 0 0;
+}
+body .modal .modal__inner .modal__footer a:hover {
+    background: #4d74c3;
+}
+body .modal .modal__inner .modal__footer a.disabled {
+    background: #EFEFEF;
+}
