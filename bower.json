@@ -1,0 +1,14 @@
+{
+  "name": "chatdad",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Mehmet Seven <mehmetseven0@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "chat",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/meseven/chatdad"
+}
