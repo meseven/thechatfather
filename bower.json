@@ -10,5 +10,8 @@
     "chat",
     "nodejs"
   ],
-  "homepage": "https://github.com/meseven/chatdad"
+  "homepage": "https://github.com/meseven/chatdad",
+  "dependencies": {
+    "angular": "^1.6.9"
+  }
 }
