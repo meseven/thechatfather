@@ -2,7 +2,7 @@
 ![the chat father](http://oi67.tinypic.com/10p5yy9.jpg)
 
 # How to install
-## Clone repo
+## Clone repo and install dependencies
 `git clone https://github.com/meseven/thechatfather.git`
 
 `cd thechatfather`
