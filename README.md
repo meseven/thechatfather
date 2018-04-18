@@ -4,7 +4,9 @@
 # How to install
 ## Clone repo
 `git clone https://github.com/meseven/thechatfather.git`
+
 `cd thechatfather`
+
 `npm install`
 
 ## Development enviroments
