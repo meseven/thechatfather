@@ -43,6 +43,8 @@ typings/
 # Optional npm cache directory
 .npm
 
+.env
+
 # Optional eslint cache
 .eslintcache
 
