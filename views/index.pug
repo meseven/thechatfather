@@ -2,6 +2,7 @@ extends layout
 
 append stylesheets
   link(rel='stylesheet', href='/stylesheets/index.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 
 block content
   div(ng-controller="indexController")
@@ -11,8 +12,8 @@ block content
           h2 Welcome, please login.
         .modal__footer
           a(href='#')
-            i.fa.fa-facebook(aria-hidden='true')
-            | Login with Facebook
+            i.fa.fa-google-plus(aria-hidden='true')
+            | Login with Google+
 
 append javascripts
   script(src="/javascripts/controller/indexController.js")
