@@ -5,7 +5,74 @@ append stylesheets
 
 block content
   div(ng-controller="chatController")
-    h1 #{ user.name } #{ user.surname }
+    .wrapper
+      .container
+        .left
+          .top
+            ul.tab
+              li.conversations
+                a.active(href='#') Chats
+              li.onlineUsers
+                a(href='#') Online Users
+          ul.people
+            li.person
+              span.name Thomas Bangalter
+              span.preview I was wondering...
+            li.person.active
+              span.name Dog Woofson
+              span.preview I've forgotten how it felt before
+            li.person
+              span.name Louis CK
+              span.preview But we’re probably gonna need a new carpet.
+            li.person
+              span.name Bo Jackson
+              span.preview It’s not that bad...
+            li.person
+              span.name Michael Jordan
+              span.preview
+                | Wasup for the third time like is
+                | you blind bitch
+            li.person
+              span.name Drake
+              span.preview howdoyoudoaspace
+            li.person
+              span.name Louis CK
+              span.preview But we’re probably gonna need a new carpet.
+            li.person
+              span.name Bo Jackson
+              span.preview It’s not that bad...
+            li.person
+              span.name Michael Jordan
+              span.preview
+                | Wasup for the third time like is
+                | you blind bitch
+            li.person
+              span.name Drake
+              span.preview howdoyoudoaspace
+          .bottom
+            button New Group
+        .right
+          .top
+            span
+              span.name Dog Woofson
+          .chat.active-chat
+            .bubble.you
+              span Hakan Aydın
+              | Hello, can you hear me?
+            .bubble.you
+              span Hakan Aydın
+              | I'm in California dreaming
+            .bubble.me ... about who we used to be.
+            .bubble.me Are you serious?
+            .bubble.you
+              span Hakan Aydın
+              | When we were younger and free...
+            .bubble.you
+              span Hakan Aydın
+              | I've forgotten how it felt before
+          .write
+            input(type='text')
+            a.write-link.send(href='javascript:;')
 
 append javascripts
   script(src="/javascripts/controller/chatController.js")
