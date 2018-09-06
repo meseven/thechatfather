@@ -1,5 +1,5 @@
 {
-  "name": "chatdad",
+  "name": "TheChatFather",
   "description": "",
   "main": "",
   "authors": [
@@ -10,7 +10,7 @@
     "chat",
     "nodejs"
   ],
-  "homepage": "https://github.com/meseven/chatdad",
+  "homepage": "https://github.com/meseven/thechatfather",
   "dependencies": {
     "angular": "^1.6.9"
   }
