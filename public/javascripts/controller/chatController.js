@@ -1,7 +1,9 @@
 app.controller('chatController', ['$scope', ($scope) => {
-	const socket = io.connect("http://localhost:3000");
+	$scope.activeTab = 2;
 
-	socket.on('hello', () => {
-		console.log('hello');
-	});
+	$scope.changeTab = tab => {
+		$scope.activeTab = tab;
+	};
+
+	const socket = io.connect("http://localhost:3000");
 }]);

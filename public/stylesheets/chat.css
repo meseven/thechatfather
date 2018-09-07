@@ -102,7 +102,8 @@ ul,li{
     background-position: top 12px left 14px;
     border-radius: 50%;
 }
-.container .left .people {
+
+.tabArea{
     margin-left: -1px;
     border-right: 1px solid var(--light);
     border-left: 1px solid var(--light);
@@ -399,6 +400,7 @@ ul,li{
 .tab li{
     width: 50%;
     float: left;
+    cursor: pointer
 }
 .tab li a{
     height:40px;
