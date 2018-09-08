@@ -27,14 +27,14 @@ io.on('connection', socket => {
 	Users.upsert(socket.id, socket.request.user);
 
 	Users.list(users => {
-		console.log(users);
+		io.emit('onlineList', users);
 	});
 
 	socket.on('disconnect', () => {
 		Users.remove(socket.request.user.googleId);
 
 		Users.list(users => {
-			console.log(users);
+			io.emit('onlineList', users);
 		});
 	});
 });
