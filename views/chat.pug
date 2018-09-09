@@ -55,11 +55,11 @@ block content
             .tab-right(ng-show="activeTab === 2")
               ul.people
                 li.person(ng-repeat="user in onlineList")
-                  img(src="{{ user.meta.profilePhotoUrl }}")
+                  img(ng-src="{{ user.meta.profilePhotoUrl }}")
                   span.name {{ user.meta.name }} {{ user.meta.surname }}
                   span.preview &nbsp;
           .bottom
-            button New Group
+            button(ng-click="newRoom()") New Room
         .right
           .top
             span
