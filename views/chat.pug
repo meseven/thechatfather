@@ -37,7 +37,10 @@ block content
             span
               span.name {{ chatName }}
           .chat.active-chat
-            .bubble.you(ng-repeat="data in messages[roomId]")
+            .bubble(
+              ng-repeat="data in messages[roomId]",
+              ng-class="you"
+            )
               span {{ data.username }} {{ data.surname }}
               | {{ data.message }}
           .write
@@ -47,5 +50,6 @@ block content
 
 append javascripts
   script(src="http://localhost:3000/socket.io/socket.io.js")
+  script(src="/javascripts/services/userFactory.js")
   script(src="/javascripts/services/chatFactory.js")
   script(src="/javascripts/controller/chatController.js")
