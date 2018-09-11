@@ -36,14 +36,16 @@ block content
           .top
             span
               span.name {{ chatName }}
-          .chat.active-chat
+
+          .loading(ng-show="loadingMessages") Loading...
+          .chat.active-chat(ng-show="!loadingMessages")
             .bubble(
               ng-repeat="data in messages[roomId]",
               ng-class="{false: 'you', true: 'me'}[data.userId == user._id]"
             )
               span {{ data.username }} {{ data.surname }}
               | {{ data.message }}
-          .write
+          .write(ng-show="!loadingMessages")
             form(ng-submit="newMessage()")
               input(type='text', ng-model="message")
               a.write-link.send(ng-click="newMessage()")
