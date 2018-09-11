@@ -39,7 +39,7 @@ block content
           .chat.active-chat
             .bubble(
               ng-repeat="data in messages[roomId]",
-              ng-class="you"
+              ng-class="{false: 'you', true: 'me'}[data.userId == user._id]"
             )
               span {{ data.username }} {{ data.surname }}
               | {{ data.message }}
@@ -49,7 +49,7 @@ block content
               a.write-link.send(ng-click="newMessage()")
 
 append javascripts
-  script(src="http://localhost:3000/socket.io/socket.io.js")
+  script(src="/socket.io/socket.io.js")
   script(src="/javascripts/services/userFactory.js")
   script(src="/javascripts/services/chatFactory.js")
   script(src="/javascripts/controller/chatController.js")
