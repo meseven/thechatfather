@@ -37,20 +37,9 @@ block content
             span
               span.name {{ chatName }}
           .chat.active-chat
-            .bubble.you
-              span Hakan Aydın
-              | Hello, can you hear me?
-            .bubble.you
-              span Hakan Aydın
-              | I'm in California dreaming
-            .bubble.me ... about who we used to be.
-            .bubble.me Are you serious?
-            .bubble.you
-              span Hakan Aydın
-              | When we were younger and free...
-            .bubble.you
-              span Hakan Aydın
-              | I've forgotten how it felt before
+            .bubble.you(ng-repeat="data in messages[roomId]")
+              span {{ data.username }} {{ data.surname }}
+              | {{ data.message }}
           .write
             form(ng-submit="newMessage()")
               input(type='text', ng-model="message")
