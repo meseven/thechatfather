@@ -37,12 +37,15 @@ io.on('connection', socket => {
 	});
 
 	socket.on('newMessage', data => {
-		Messages.upsert({
+		const messageData = {
 			...data,
 			userId: socket.request.user._id,
 			username: socket.request.user.name,
 			surname: socket.request.user.surname,
-		});
+		};
+
+		Messages.upsert(messageData);
+		socket.broadcast.emit('receiveMessage', messageData);
 	});
 
 	socket.on('newRoom', roomName => {

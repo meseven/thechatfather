@@ -40,6 +40,16 @@ app.controller('chatController', ['$scope', 'userFactory','chatFactory', ($scope
 		$scope.$apply();
 	});
 
+	socket.on('receiveMessage', data => {
+		$scope.messages[data.roomId].push({
+			userId: data.userId,
+			username: data.username,
+			surname: data.surname,
+			message: data.message
+		});
+		$scope.$apply();
+	});
+
 	$scope.newMessage = () => {
 		if ($scope.message.trim() !== '') {
 			socket.emit('newMessage', {
