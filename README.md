@@ -1,5 +1,4 @@
 # TheChatFather
-![the chat father](http://oi67.tinypic.com/10p5yy9.jpg)
 
 # How to install
 ## Clone repo and install dependencies
